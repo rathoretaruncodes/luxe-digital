@@ -1,4 +1,5 @@
-//state management
+//state management 
+//manages dialog/modal
 import { create } from 'zustand';
 
 interface useStoreModalStore {

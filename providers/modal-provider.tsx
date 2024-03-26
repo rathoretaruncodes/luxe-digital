@@ -22,4 +22,4 @@ export const ModalProvider = () => {
     )
 }
 
-//use it in layout.tsx
+//used in layout.tsx
