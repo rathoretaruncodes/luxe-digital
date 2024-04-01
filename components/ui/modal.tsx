@@ -1,3 +1,4 @@
+//to standardize the use of dialog component
 "use client";
 
 import { 
@@ -43,7 +44,6 @@ export const Modal: React.FC<ModalProps> = ({
                     {children}
                 </div>
             </DialogContent>
-
         </Dialog>
     )
 }

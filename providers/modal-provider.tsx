@@ -1,3 +1,5 @@
+//to make sure store-modal.tsx is available throughout the application
+//to be used in layout.tsx
 "use client"
 
 import { StoreModal } from "@/components/modals/store-modal";
@@ -19,7 +21,6 @@ export const ModalProvider = () => {
         <>
         <StoreModal/>
         </>
-    )
-}
+    );
+};
 
-//used in layout.tsx

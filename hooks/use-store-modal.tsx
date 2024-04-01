@@ -1,4 +1,4 @@
-//state management 
+//state management for dialog.tsx
 //manages dialog/modal
 import { create } from 'zustand';
 
