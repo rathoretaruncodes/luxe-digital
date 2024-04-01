@@ -6,6 +6,7 @@ export async function POST (
     req: Request,
 ) {
     try {
+        //clerk to authenticate this post route
         const { userId } = auth();
         const body = await req.json();
 
@@ -19,13 +20,13 @@ export async function POST (
             return new NextResponse("Name is required", { status: 400 });
         }
 
+        //if the auth check is passed
         const store = await prismadb.store.create({
             data: {
                 name,
                 userId
             }
         });
-
         return NextResponse.json(store);
     } catch (error) {
         console.log('[STORES_POST]', error)
