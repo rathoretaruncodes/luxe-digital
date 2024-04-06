@@ -40,7 +40,7 @@ export const StoreModal = () => {
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
       try {
         setLoading(true);
-        //response will be re-directed to admin dashboard
+        //response will be re-directed to [storeId]admin dashboard
         //response contains the newly created storeId
         const response = await axios.post('/api/stores', values);
 

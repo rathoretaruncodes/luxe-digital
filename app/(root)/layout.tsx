@@ -21,8 +21,10 @@ export default async function SetupLayout({
     });
 
     if(store) {
+        //[storeId] route inside dashboard
         redirect(`/${store.id}`);
     }
+    //otherwise
     return (
         <>
         {children}
