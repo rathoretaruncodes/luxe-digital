@@ -118,6 +118,8 @@ export const SettingsForm:React.FC<SettingsFormProps> = ({
                     </Button>
                 </form>
             </Form>
+            <Separator />
+            
         </>
     )
 }
