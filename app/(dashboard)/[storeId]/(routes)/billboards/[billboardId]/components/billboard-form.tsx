@@ -4,6 +4,7 @@ import { AlertModal } from "@/components/modals/alert-modal";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Heading } from "@/components/ui/heading";
+import ImageUpload from "@/components/ui/image-upload";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -110,6 +111,23 @@ export const BillboardForm:React.FC<BillboardFormProps> = ({
             {/* form starts here */}
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-full">
+                <FormField
+                        control={form.control}
+                        name="imageUrl"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Background Image</FormLabel>
+                                <FormControl>
+                                    <ImageUpload 
+                                      value={field.value ? [field.value] : []}
+                                      disabled={loading}
+                                      onChange={(url) => field.onChange(url)}
+                                      onRemove={() => field.onChange("")}
+                                    />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )} />
                     <div className="grid grid-cols-3 gap-8">
                         <FormField
                         control={form.control}
